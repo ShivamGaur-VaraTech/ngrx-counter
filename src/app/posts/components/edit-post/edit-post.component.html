@@ -1,0 +1,19 @@
+<div class="px-3">
+<form  (submit)="update()"  class="row "> 
+        <ng-container *ngIf="(editPost) as e ">
+        
+        
+        <div class="col">
+            <label>Title</label>
+            <input [(ngModel)]="e.title" class="form-control form-control-sm" type="text" [ngModelOptions]="{standalone: true}" placeholder="POST Title">
+        </div>
+        <div class="col">
+            <label>Description</label>
+            <textarea rows="1" [(ngModel)]="e.description" [ngModelOptions]="{standalone: true}" class="form-control form-control-sm" type="text" placeholder="POST Description"></textarea>
+        </div>
+        <div class="col d-flex align-items-end">
+            <button type="submit" class="btn btn-sm btn-success">Submit</button>
+        </div>
+        </ng-container>
+    </form>
+</div>
